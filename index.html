@@ -184,6 +184,7 @@
             pointer-events: none;
             z-index: 9980;
         }
+        
         .interactive-layer {
             position: relative;
             z-index: 10;
@@ -770,6 +771,11 @@
             background: transparent;
             color: #f0ecf5;
         }
+        
+        /* FIX: This precisely lifts the final animation layer ABOVE the canvas sky so it is never hidden */
+        #ending-section .interactive-layer {
+            z-index: 9985;
+        }
 
         .star-animation-container {
             position: relative;
@@ -879,7 +885,6 @@
 </head>
 <body>
 
-    <!-- INVISIBLE AUDIO PLAYER FOR CAKE SECTION -->
     <audio id="bday-audio" src="happy-birthday.mp3.mpeg" loop></audio>
 
     <div id="sky-flash-overlay"></div>
@@ -1000,7 +1005,6 @@
                 <div class="washi-tape"></div>
                 <div class="polaroid" style="--r: -2deg;">
                     
-                    <!-- VIDEO TAG -->
                     <video src="my-video.mp4" autoplay loop playsinline controls style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 2px;"></video>
                     
                     <div class="polaroid-caption">Where It All Began</div>
@@ -1072,18 +1076,18 @@
             <h2 class="serif-heading" style="font-size: 2rem; margin-bottom: 10px;">Our Memories</h2>
             
             <div class="scrapbook-album-grid">
-                <div class="polaroid" style="--r: -3deg;"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300"><div class="polaroid-caption">Smile ✨</div></div>
-                <div class="polaroid" style="--r: 2deg;"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300"><div class="polaroid-caption">Laughter 🌸</div></div>
-                <div class="polaroid" style="--r: -2deg;"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300"><div class="polaroid-caption">Glow ⭐</div></div>
-                <div class="polaroid" style="--r: 4deg;"><img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=300"><div class="polaroid-caption">Joy 🥰</div></div>
-                <div class="polaroid" style="--r: -4deg;"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300"><div class="polaroid-caption">Kindness 🕊️</div></div>
-                <div class="polaroid" style="--r: 3deg;"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300"><div class="polaroid-caption">Peace ☕</div></div>
-                <div class="polaroid" style="--r: -1deg;"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300"><div class="polaroid-caption">Grace 🌾</div></div>
-                <div class="polaroid" style="--r: 2deg;"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300"><div class="polaroid-caption">Wanderlust 🌍</div></div>
-                <div class="polaroid" style="--r: -3deg;"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300"><div class="polaroid-caption">Memories 🎞️</div></div>
-                <div class="polaroid" style="--r: 1deg;"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300"><div class="polaroid-caption">Bliss 🌅</div></div>
-                <div class="polaroid" style="--r: -2deg;"><img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300"><div class="polaroid-caption">Sparkle ✨</div></div>
-                <div class="polaroid" style="--r: 4deg;"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300"><div class="polaroid-caption">Forever ❤️</div></div>
+                <div class="polaroid" style="--r: -3deg;"><img src="1.jpg"><div class="polaroid-caption">Smile ✨</div></div>
+                <div class="polaroid" style="--r: 2deg;"><img src="2.jpg"><div class="polaroid-caption">Laughter 🌸</div></div>
+                <div class="polaroid" style="--r: -2deg;"><img src="3.jpg"><div class="polaroid-caption">Glow ⭐</div></div>
+                <div class="polaroid" style="--r: 4deg;"><img src="4.jpg"><div class="polaroid-caption">Joy 🥰</div></div>
+                <div class="polaroid" style="--r: -4deg;"><img src="5.jpg"><div class="polaroid-caption">Kindness 🕊️</div></div>
+                <div class="polaroid" style="--r: 3deg;"><img src="6.jpg"><div class="polaroid-caption">Peace ☕</div></div>
+                <div class="polaroid" style="--r: -1deg;"><img src="7.jpg"><div class="polaroid-caption">Grace 🌾</div></div>
+                <div class="polaroid" style="--r: 2deg;"><img src="8.jpg"><div class="polaroid-caption">Wanderlust 🌍</div></div>
+                <div class="polaroid" style="--r: -3deg;"><img src="9.jpg"><div class="polaroid-caption">Memories 🎞️</div></div>
+                <div class="polaroid" style="--r: 1deg;"><img src="10.jpg"><div class="polaroid-caption">Bliss 🌅</div></div>
+                <div class="polaroid" style="--r: -2deg;"><img src="11.jpg"><div class="polaroid-caption">Sparkle ✨</div></div>
+                <div class="polaroid" style="--r: 4deg;"><img src="12.jpg"><div class="polaroid-caption">Forever ❤️</div></div>
             </div>
 
             <button class="premium-btn" style="margin-top: 25px;" onclick="routeTo('letter-section')">
@@ -1124,7 +1128,6 @@
         </div>
     </section>
 
-    <!-- SECTION 9: THE PURE NIGHT SKY & MAGIC STAR BURST FINALE -->
     <section id="ending-section">
         <div class="interactive-layer" style="max-width: 500px;" id="ending-entrance-container">
             
